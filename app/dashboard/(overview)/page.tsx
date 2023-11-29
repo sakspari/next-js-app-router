@@ -8,7 +8,7 @@ import { CardSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/ap
 
 type Props = {}
 
-const page = async (props: Props) => {
+const page = (props: Props) => {
     
   return (
     <main>
