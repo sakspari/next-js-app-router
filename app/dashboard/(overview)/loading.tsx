@@ -1,12 +1,10 @@
-import React from 'react'
-import DashboardSkeleton from '../../ui/skeletons'
+import React from 'react';
+import DashboardSkeleton from '../../ui/skeletons';
 
-type Props = {}
+type Props = {};
 
 const loading = (props: Props) => {
-  return (
-    <DashboardSkeleton/>
-  )
-}
+  return <DashboardSkeleton />;
+};
 
-export default loading
+export default loading;

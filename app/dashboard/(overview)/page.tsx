@@ -1,15 +1,18 @@
-import React, { Suspense } from 'react'
+import React, { Suspense } from 'react';
 import CardWrapper, { Card } from '@/app/ui/dashboard/cards';
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lustiana } from '@/app/ui/fonts';
 // import { fetchCardData } from '../../lib/data';
-import { CardSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
+import {
+  CardSkeleton,
+  LatestInvoicesSkeleton,
+  RevenueChartSkeleton,
+} from '@/app/ui/skeletons';
 
-type Props = {}
+type Props = {};
 
 const page = (props: Props) => {
-    
   return (
     <main>
       <h1 className={`${lustiana.className} mb-4 text-xl md:text-2xl`}>
@@ -29,7 +32,7 @@ const page = (props: Props) => {
         </Suspense>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
-        <Suspense fallback={<RevenueChartSkeleton/>}>
+        <Suspense fallback={<RevenueChartSkeleton />}>
           <RevenueChart />
         </Suspense>
         <Suspense fallback={<LatestInvoicesSkeleton />}>
@@ -37,7 +40,7 @@ const page = (props: Props) => {
         </Suspense>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default page
+export default page;
